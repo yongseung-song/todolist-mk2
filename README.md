@@ -4,11 +4,12 @@ Hi. this is a to-do list react app built with vite but with some features/techni
 
 ### features
 
-- [ ] Reusable Components
+- [x] Global state management with `Context API`
+- [x] Reusable Components
+- [x] Barrel export pattern
 - [ ] tailwind with variants
   - [ ] `clsx`
   - [ ] `twMerge`
 - [ ] Schema validation with `Zod` and `React-Hook-Form`
-- [ ] Context API
-- [ ] Barrel export pattern
-- [ ]
+
+### Dependencies
