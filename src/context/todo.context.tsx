@@ -32,11 +32,12 @@ export function TodoProvider({ children }: { children: ReactNode }) {
   const [todo, setTodo] = useState<Todo[]>([]);
   const [doneTodo, setDoneTodo] = useState<Todo[]>([]);
 
-  const add = useCallback((newTodo: Todo) => {
+  const add = (newTodo: Todo) => {
+    console.log(newTodo);
     const newTodos = [...todoItems, newTodo];
     setTodoItems(newTodos);
     updateTodoLists(newTodos);
-  }, []);
+  };
 
   const toggle = useCallback((id: string) => {
     const result = todoItems.map((item) => {

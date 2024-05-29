@@ -1,11 +1,20 @@
 import { ComponentProps } from 'react';
 
 interface Props extends ComponentProps<'input'> {
-  className?: string;
+  withLabel?: boolean;
 }
 
-function Input({ className, ...props }: Props) {
-  return <input className={className} {...props} />;
+function Input({ withLabel = false, ...props }: Props) {
+  return (
+    <div className="relative">
+      {withLabel ? (
+        <label className="font-semibold px-2" htmlFor={props.name}>
+          {props.name}
+        </label>
+      ) : null}
+      <input {...props} />
+    </div>
+  );
 }
 
 export default Input;

@@ -1,14 +1,11 @@
-import { ComponentProps, MouseEventHandler, ReactNode } from 'react';
+import { ComponentProps } from 'react';
 
-interface Props extends ComponentProps<'button'> {
-  children: ReactNode;
-  onClick: MouseEventHandler;
-  className?: string;
-}
-
-function Button({ children, className, onClick: handler }: Props) {
+function Button({ children, ...props }: ComponentProps<'button'>) {
   return (
-    <button onClick={handler} className={className}>
+    <button
+      className=" bg-gray-100 border-2 border-red-300 hover:bg-red-400 hover:text-white rounded-md p-4 w-24 block "
+      {...props}
+    >
       {children}
     </button>
   );

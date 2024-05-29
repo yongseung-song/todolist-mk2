@@ -1,11 +1,7 @@
 import { ComponentProps } from 'react';
 
-interface Props extends ComponentProps<'form'> {
-  className?: string;
-}
-
-function Form({ className }: Props) {
-  <form action="" className={className}></form>;
+function Form({ children, ...props }: ComponentProps<'form'>) {
+  return <form {...props}>{children}</form>;
 }
 
 export default Form;

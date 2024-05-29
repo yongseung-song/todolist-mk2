@@ -12,9 +12,6 @@ function List({ todo, title }: Props) {
       <h1 className=" mb-3 text-2xl font-bold">{title}</h1>
       <div className=" w-full h-auto bg-white w-screen overflow-x-scroll">
         <ul className=" w-[1200px]">
-          <Card
-            todo={{ title: '투두', content: '바바', id: '123', isDone: false }}
-          />
           {todo.map((item: Todo) => (
             <Card todo={item} />
           ))}
