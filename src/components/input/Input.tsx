@@ -12,7 +12,10 @@ function Input({ withLabel = false, ...props }: Props) {
           {props.name}
         </label>
       ) : null}
-      <input {...props} />
+      <input
+        className=" border-2 border-white focus:border-2 focus:border-red-400 rounded-md p-2 focus:outline-none"
+        {...props}
+      />
     </div>
   );
 }

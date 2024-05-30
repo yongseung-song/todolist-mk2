@@ -9,11 +9,11 @@ interface Props {
 function List({ todo, title }: Props) {
   return (
     <section>
-      <h1 className=" mb-3 text-2xl font-bold">{title}</h1>
-      <div className=" w-full h-auto bg-white w-screen overflow-x-scroll">
-        <ul className=" w-[1200px]">
+      <h1 className=" mb-3 px-4 text-2xl font-bold">{title}</h1>
+      <div className="px-4 w-full h-60 bg-white w-screen overflow-x-scroll">
+        <ul className=" w-fit flex gap-4 w-[1200px]">
           {todo.map((item: Todo) => (
-            <Card todo={item} />
+            <Card key={item.id} todo={item} />
           ))}
         </ul>
       </div>

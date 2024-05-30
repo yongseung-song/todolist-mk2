@@ -1,7 +1,12 @@
+import { TodoProvider } from './context/todo.context';
 import Homepage from './pages/Homepage';
 
 function App() {
-  return <Homepage />;
+  return (
+    <TodoProvider>
+      <Homepage />
+    </TodoProvider>
+  );
 }
 
 export default App;
